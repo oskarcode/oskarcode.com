@@ -7,7 +7,7 @@ from .models import Post
 
 # Create your views here.
 
-def home( request): # take request as argument
+def home( request): # take request as argument, can pass the context as argument and can be rendered
           context = {
                     'posts': Post.objects.all()
           }

@@ -1,0 +1,23 @@
+domain and DNS : 
+register from cloudflare # for my case, mycodeforever, oskarcode, 9.15 USD/year
+configure name
+whois oskarcode.com 
+
+
+
+domain regiatory, dns provider 
+- get a domain from domain regiatory and configure name server, for cloudflare since i have registered my domains from them, i can configure DNS with IP
+
+check IP and domain:
+nslookup 
+whois domain
+
+
+checklists:
+- buy domain 
+-configure DNS: if your domain and DNS is not from the same registour, you need to have nameservers to add to DNS
+- configure reverse DNS: not sure if necessary, if the IP is from aws, need to do with elastic IP 
+-change the settings.py allowed hosts, add the domain # after change, reload the supervisor, otherwise the change is not synced
+-change the django.config in nginx, added new domains
+
+video to refer:

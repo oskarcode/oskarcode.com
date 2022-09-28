@@ -1,0 +1,14 @@
+
+add local file to remore github:
+git init # create a git repo in local 
+git add . #  add local to the repo 
+git commit -m '' # updated the changes 
+git remote push -u origin master # push the local repo into remore master branch 
+
+update local file:
+git status
+git add . 
+git commit -m ''
+git push 
+
+reference: https://www.youtube.com/watch?v=SWYqp7iY_Tc

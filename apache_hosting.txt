@@ -1,0 +1,41 @@
+ip: 44.210.126.216
+public domain: ec2-44-210-126-216.compute-1.amazonaws.com
+ssh -i django-server.cer  ubuntu@ec2-44-210-126-216.compute-1.amazonaws.com
+scp -i django-server.cer -r oskar_website ubuntu@ec2-44-210-126-216.compute-1.amazonaws.com:~/oskar_website
+
+
+sudo rm -rf blog_vnv # delete vnv
+ls /usr/bin/python* # see all installed python version
+sudo apt-get purge --auto-remove python3.5 # uninstall both configuration and/or data files of python3.5 and it's dependencies
+sudo apt-get install python3.8-venv
+
+sudo apt-get install libapache2-mod-wsgi-py3
+
+<VirtualHost *:80>
+	ServerAdmin admin@djangoproject.localhost
+	ServerName djangoproject.localhost
+	ServerAlias www.djangoproject.localhost
+	DocumentRoot /home/ubuntu/oskar_website
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+	Alias /static /home/ubuntu/oskar_website/static
+	<Directory /home/ubuntu/oskar_website/static>
+		Require all granted
+	</Directory>
+
+	Alias /static /home/ubuntu/oskar_website/media
+	<Directory /home/ubuntu/oskar_website/media>
+		Require all granted
+	</Directory>
+
+	<Directory /home/ubuntu/oskar_website/oskar_website>
+		<Files wsgi.py>
+			Require all granted
+		</Files>
+	</Directory>
+
+	WSGIDaemonProcess django_project python-path=/home/ubuntu/oskar_website python-home=/home/ubuntu/oskar_website/venv
+	WSGIProcessGroup django_project
+	WSGIScriptAlias / /home/ubuntu/oskar_website/oskar_website/wsgi.py
+</VirtualHost>

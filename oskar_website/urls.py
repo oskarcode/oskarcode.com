@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from django.urls import path,include
+from django.urls import path,include # inlude function can include other app's url in project url, e.g,. include('blog.url) means, project url will reditect to blog.url
 from users import views as user_views
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = [
+urlpatterns = [ # this is the project URL path, tell django which route to map
     path("admin/", admin.site.urls), # urls redirect, admin URL will direct to sites.urls for the content
     path('register',user_views.register, name = 'register'),
     path('profile',user_views.profile, name = 'profile'),

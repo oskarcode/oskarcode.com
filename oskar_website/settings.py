@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# add class name which is inherited Apps.config to the application name below, so that Django can find the template
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",

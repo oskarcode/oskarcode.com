@@ -6,8 +6,8 @@ from django.urls import reverse
 
 # Create your models here.
 
-
-class Post(models.Model):
+# this is how the post generated when user created a post
+class Post(models.Model): # each class will be table in the database
           title = models.CharField(max_length= 100)
           content = models.TextField()
           date_posted = models.DateTimeField(default=timezone.now)
