@@ -1,6 +1,6 @@
 # oskarcode.com
 Project background: 
-I have created my blog(oskarcode.com) and made it live with the tutorial here as part of my learnings, https://www.youtube.com/watch?v=Sa_kQheCnds&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=13
+I have created my blog(https://www.oskarcode.com/) and made it live with the tutorial here as part of my learnings, https://www.youtube.com/watch?v=Sa_kQheCnds&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=13
 I have changed some parts and deployed it with different way.  You can see the codes here, 
 
 Blog function: 
