@@ -38,10 +38,14 @@ what this does here is generate a path and access
 
 
 
-synyx
+Synyx
 - {{}} : access variable, a bit like dictionary, e.g., {{post.title}}, this will get title of the post 
 - {% %} : put function in it, e.g., {% for i in n% }{% endfor }, this will run for loop
 -{ % static 'path' %}: access the static path, e.g., href = '{ % static 'path' %}'
 - {% url 'path '%} : access the url path, e.g, href = '{ % url 'path' %}', instead of hardcoding url path, we used url function and name of the path to get the url
 - makemigrations/migrate: anytime update DB, needs to run this to update, when migarted, it creates a DB table backend for us
 -python manage.py shell: we can play with models or db with SQL language
+
+
+Security best practises:
+- use variables for sensitive info such as secret keys, email credential

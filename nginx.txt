@@ -122,3 +122,5 @@ https://stackoverflow.com/questions/70285834/forbidden-403-csrf-verification-fai
 
 video link to refer:
 https://www.youtube.com/watch?v=_TBw7ALJp0Y
+
+/home/ubuntu/oskar_website
