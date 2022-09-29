@@ -1,3 +1,9 @@
+
+project:
+I created a my blog and make it live with the tutorial here, https://www.youtube.com/watch?v=Sa_kQheCnds&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=13
+I did change some parts and deplot it with different way. 
+
+
 Check lists:
 - Python, Jango, venv 
 - django-admin # to get all commands with django such as runserver
@@ -7,14 +13,8 @@ django-admin startproject projectname # create a project
 Project directory
 settings.py
 - update installed application, every time when we created new apps, need to add the class name from apps.py
-
-
 urls.py
 - define the path, function and name
-
-
-
-
 
 
 App directory
@@ -22,19 +22,14 @@ urls.py
 - redirect from project urls.py
 views.py
 -main function/logic for the apps
-
 templates/appname 
 -template for the views
-
 base.html
 - can reused for other templates, can be defined  with:  {% block content %}{% endblock%}, the block area can be overwrite, other area kept same with sub template /
 to extend the base.html, put {% extends 'base.html %}
-
 static/appname
 -need to create this folder for static files such as main.css. To include main.css file put {% load static %} on the top of the files, in href='{% static 'static/main.css %}'/
 what this does here is generate a path and access
--
-
 
 
 
