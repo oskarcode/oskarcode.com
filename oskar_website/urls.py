@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path,include # inlude function can include other app's url in project url, e.g,. include('blog.url) means, project url will reditect to blog.url
 from users import views as user_views
+from password_generator import views as password_views
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -29,6 +30,7 @@ urlpatterns = [ # this is the project URL path, tell django which route to map
     path('password-reset/',auth_views.PasswordResetView.as_view(template_name = 'users/password_reset.html'), name = 'password_reset'),
     path('password-reset/done',auth_views.PasswordResetDoneView.as_view(template_name = 'users/password_reset_done.html'), name = 'password_reset_done'),
     path("", include('blog.urls')),
+    path("passwordgenerator/", include('password_generator.urls')),
 
 ]
 

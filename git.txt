@@ -1,9 +1,13 @@
 
 add local file to remore github:
+check git with the local folder: git -a # this will show hidden files
 git init # create a git repo in local 
 git add . #  add local to the repo 
 git commit -m '' # updated the changes 
 git remote push -u origin master # push the local repo into remore master branch 
+git stash # go back to previous version, will undo any last change/update 
+git log -> get checkout # git log will show the commit IDs, git checkout 'commit id' will roll back to previous version. 
+
 
 update local file:
 git status
