@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.views.generic import ListView,DetailView,CreateView, UpdateView, DeleteView
-from .models import Post
+from .models import Post, Project
 #from django.http import HttpResponse
 
 # Create your views here.
@@ -76,4 +76,5 @@ class PostDeletelView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
                     return False
 
 def about(request):
-          return render(request,'blog/about.html', {'title': 'About'})
+          projects = Project.objects.all()
+          return render(request,'blog/about.html', {'projects': projects})

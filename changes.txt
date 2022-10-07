@@ -1,0 +1,19 @@
+
+10/7 
+add about page:
+blog:
+- add models called projects
+-add module to admin
+-change the views.py 
+-make migrations
+-change the templates, about.html
+-update the static files
+-add nav bar for the about page so that resume and linkedin page can be showed up 
+
+
+
+scp -i django-server.cer -r  oskar_website/blog/static/blog/ ubuntu@ec2-44-201-197-11.compute-1.amazonaws.com:~/oskar_website/blog/static/blog/ 
+
+
+
+
