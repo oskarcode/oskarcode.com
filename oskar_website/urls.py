@@ -31,6 +31,7 @@ urlpatterns = [ # this is the project URL path, tell django which route to map
     path('password-reset/done',auth_views.PasswordResetDoneView.as_view(template_name = 'users/password_reset_done.html'), name = 'password_reset_done'),
     path("", include('blog.urls')),
     path("passwordgenerator/", include('password_generator.urls')),
+    path("todo/", include('todo.urls')),
 
 ]
 

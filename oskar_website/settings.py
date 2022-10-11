@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'crispy_forms',
     "password_generator",
+    "todo",
 ]
 
 MIDDLEWARE = [

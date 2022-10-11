@@ -11,8 +11,35 @@ blog:
 -add nav bar for the about page so that resume and linkedin page can be showed up 
 
 
+change in server:
+-upload the static files: scp -i django-server.cer -r  oskar_website/blog/static/blog/ ubuntu@ec2-44-201-197-11.compute-1.amazonaws.com:~/oskar_website/blog/static/blog/ 
+-run python manage.py collectstatic
+- reload supervisor
 
-scp -i django-server.cer -r  oskar_website/blog/static/blog/ ubuntu@ec2-44-201-197-11.compute-1.amazonaws.com:~/oskar_website/blog/static/blog/ 
+
+
+
+10/11 
+add todo app:
+- django-admin startapp todo
+oskar_website:
+- add todo app 
+- add todo into the urls path
+
+todo:
+- create urls.py-> copy the urls from project
+-create templates/todo-> copy all templates
+-create forms.py-> copy all forms
+-create statci-> copy
+-models: copy
+
+makemigrations
+
+
+blog:
+- change base.html: add todo nav bar and link it to the todo url
+
+
 
 
 
