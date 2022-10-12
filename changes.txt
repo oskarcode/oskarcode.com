@@ -40,6 +40,18 @@ blog:
 - change base.html: add todo nav bar and link it to the todo url
 
 
+Settings.py: add a path, todo/, todo/urls.py 
+Add to do as a new app
+Todo/urls.py
+-	Comment signup, logout,login,
+Views.py
+-	Comment signupuser,logoutuser,loginuser,
+Templates
+-	Home.html:  change start url to {% url 'currenttodos' %}
+-	Base.html:  logout url, "{% url 'logout' %}", href="{% url 'register' %}">Sign Up</a>, href="{% url 'login' %}">Login
+
+
+
 
 
 
